@@ -151,3 +151,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_HOST_USER='--email placeholder--'
 # EMAIL_HOST_PASSWORD=''
 # EMAIL_USE_TLS=True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
